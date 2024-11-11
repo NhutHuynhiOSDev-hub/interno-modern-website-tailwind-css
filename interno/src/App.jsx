@@ -1,5 +1,6 @@
 import "./App.css";
 import logo from "./assets/logo.svg";
+import about from "./assets/about/img.png";
 
 const toggleButton = () => {
   const navMenu = document.querySelector("#nav_menu");
@@ -66,7 +67,7 @@ const Main = () => {
         </div>
       </section>
       {/* Steps */}
-      <section className="mt-[80px] xl:mt-[200px] relative z-20">
+      <section id="steps" className="mt-[80px] xl:mt-[200px] relative z-20">
         <div className="px-12">
           <div className="grid grid-cols-1 gap-12 xl:grid-cols-3">
             {/* Step 1 */}
@@ -108,6 +109,40 @@ const Main = () => {
                 <i className="text-accent ri-arrow-right-line"></i>
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+      {/* About Us */}
+      <section id="about" className=" mt-[80px] xl:mt-[200px] relative z-20">
+        <div className="flex px-12 space-y-6 flex-col xl:flex-row-reverse text-center xl:text-left justify-between items-center gap-8 xl:gap-[74px]">
+          {/* Image */}
+          <div className=" max-w-[553px]">
+            <img src={about} />
+          </div>
+          <div className="flex flex-col flex-1 space-y-8 justify-center items-center xl:items-start">
+            <h2 className="h2">
+              We Create The Art Of Stylish Living Stylishly
+            </h2>
+            <p>
+              It is a long established fact that a reader will be distracted by
+              the of readable content of a page when lookings at its layouts the
+              points of using that it has a more-or-less normal.
+            </p>
+            {/* Phone */}
+            <div className="flex flex-row justify-center lg:justify-start items-center space-x-4">
+              <div className="bg-accent/15 rounded-full w-[93px] h-[93px] flex justify-center items-center">
+                <i className="ri-phone-fill text-accent text-4xl"></i>
+              </div>
+              <div className="flext justify-center items-center text-left space-y-2">
+                <p className="text-2xl font-bold">0987 653 321</p>
+                <p>Call Us Anytime</p>
+              </div>
+            </div>
+            {/* Button */}
+            <button className="btn btn-primary">
+              Get free estimation
+              <i className="text-accent ri-arrow-right-line"></i>
+            </button>
           </div>
         </div>
       </section>
