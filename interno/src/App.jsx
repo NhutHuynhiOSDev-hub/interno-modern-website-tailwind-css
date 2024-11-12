@@ -13,6 +13,11 @@ import brand03 from "./assets/brands/03.svg";
 import brand04 from "./assets/brands/04.svg";
 import brand05 from "./assets/brands/05.svg";
 
+import work01 from "./assets/work/01.png";
+import work02 from "./assets/work/02.png";
+import work03 from "./assets/work/03.png";
+import work04 from "./assets/work/04.png";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -74,6 +79,7 @@ const Main = () => {
       <AboutUsSection />
       <TestimonialsSection />
       <BrandsSection />
+      <WorksSection />
       <div className="h-[3000px] bg-slate-300"></div>
     </main>
   );
@@ -151,8 +157,11 @@ const StepsSection = () => {
 
 const AboutUsSection = () => {
   return (
-    <section id="about" className=" mt-[80px] xl:mt-[200px] relative z-20">
-      <div className="flex px-12 space-y-12 flex-col xl:flex-row-reverse text-center xl:text-left justify-between items-center gap-8 xl:gap-[74px]">
+    <section
+      id="about"
+      className="px-12  mt-[80px] xl:mt-[200px] relative z-20"
+    >
+      <div className="flex space-y-12 flex-col xl:flex-row-reverse text-center xl:text-left justify-between items-center gap-8 xl:gap-[74px]">
         {/* Image */}
         <div className=" max-w-[553px]">
           <img src={about} />
@@ -291,12 +300,83 @@ const TestimonialsSection = () => {
 const BrandsSection = () => {
   return (
     <section id="brands" className=" mt-[80px] xl:mt-[200px] relative z-20">
-      <div className="px-12 flex flex-col xl:flex-row justify-center items-center gap-12">
+      <div className="px-12  mx-auto flex flex-col xl:flex-row justify-center items-center gap-12">
         <img src={brand01} alt="brand-logo" />
         <img src={brand02} alt="brand-logo" />
         <img src={brand03} alt="brand-logo" />
         <img src={brand04} alt="brand-logo" />
         <img src={brand05} alt="brand-logo" />
+      </div>
+    </section>
+  );
+};
+
+const WorksSection = () => {
+  return (
+    <section
+      id="works"
+      className="px-12 works mt-[80px] xl:mt-[200px] relative z-20"
+    >
+      <div className="flex flex-col space-y-12 justify-center items-center text-center mb-24">
+        <h2 className="works__title h2 mb-4 ">Follow Our Projects</h2>
+        <p className="works__subTitle max-w-3xl">
+          It is a long established fact that a reader will be distracted by the
+          of readable content of page lookings at its layouts points.p
+        </p>
+      </div>
+      <div className=" works__grid grid grid-cols-1 xl:grid-cols-2 gap-[50px]">
+        {/* Work 1 */}
+        <div className="w-full h-full">
+          <img className="mb-6 w-full" src={work02} alt="work-image" />
+          <div className="flex justify-between items-center w-full">
+            <div>
+              <h3>Modern Kitchen</h3>
+              <p>Decor/Architecture</p>
+            </div>
+            <button className="bg-accent-secondary hover:bg-accent/20 w-[70px] h-[70px] rounded-full">
+              <i className="ri-arrow-right-s-line text-3xl text-primary pl-1"></i>
+            </button>
+          </div>
+        </div>
+        {/* Work 2 */}
+        <div className="w-full  h-full">
+          <img className="mb-6 w-full" src={work01} alt="work-image" />
+          <div className="flex justify-between items-center w-full">
+            <div>
+              <h3>Modern Kitchen</h3>
+              <p>Decor/Architecture</p>
+            </div>
+            <button className="bg-accent-secondary hover:bg-accent/20 w-[70px] h-[70px] rounded-full">
+              <i className="ri-arrow-right-s-line text-3xl text-primary pl-1"></i>
+            </button>
+          </div>
+        </div>
+        {/* Work 3 */}
+        <div className="w-full  h-full">
+          <img className="mb-6 w-full" src={work04} alt="work-image" />
+          <div className="flex justify-between items-center w-full">
+            <div>
+              <h3>Modern Kitchen</h3>
+              <p>Decor/Architecture</p>
+            </div>
+            <button className="bg-accent-secondary hover:bg-accent/20 w-[70px] h-[70px] rounded-full">
+              <i className="ri-arrow-right-s-line text-3xl text-primary pl-1"></i>
+            </button>
+          </div>
+        </div>
+        {/* Work 4 */}
+        <div className="w-full  h-full">
+          <img className="mb-6 w-full" src={work03} alt="work-image" />
+          <div className="flex justify-between items-center w-full">
+            <div>
+              <h3>Modern Kitchen</h3>
+              <p>Decor/Architecture</p>
+            </div>
+            <button className="bg-accent-secondary hover:bg-accent/20 w-[70px] h-[70px] rounded-full">
+              <i className="ri-arrow-right-s-line text-3xl text-primary pl-1"></i>
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   );
