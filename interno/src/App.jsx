@@ -7,6 +7,12 @@ import test02 from "./assets/testimonial/02.png";
 import test03 from "./assets/testimonial/03.png";
 import test04 from "./assets/testimonial/04.png";
 
+import brand01 from "./assets/brands/01.svg";
+import brand02 from "./assets/brands/02.svg";
+import brand03 from "./assets/brands/03.svg";
+import brand04 from "./assets/brands/04.svg";
+import brand05 from "./assets/brands/05.svg";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -67,6 +73,7 @@ const Main = () => {
       <StepsSection />
       <AboutUsSection />
       <TestimonialsSection />
+      <BrandsSection />
       <div className="h-[3000px] bg-slate-300"></div>
     </main>
   );
@@ -276,6 +283,20 @@ const TestimonialsSection = () => {
             </SwiperSlide>
           </Swiper>
         </div>
+      </div>
+    </section>
+  );
+};
+
+const BrandsSection = () => {
+  return (
+    <section id="brands" className=" mt-[80px] xl:mt-[200px] relative z-20">
+      <div className="px-12 flex flex-col xl:flex-row justify-center items-center gap-12">
+        <img src={brand01} alt="brand-logo" />
+        <img src={brand02} alt="brand-logo" />
+        <img src={brand03} alt="brand-logo" />
+        <img src={brand04} alt="brand-logo" />
+        <img src={brand05} alt="brand-logo" />
       </div>
     </section>
   );
