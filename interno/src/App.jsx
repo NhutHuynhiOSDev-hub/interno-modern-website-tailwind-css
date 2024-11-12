@@ -80,6 +80,7 @@ const Main = () => {
       <TestimonialsSection />
       <BrandsSection />
       <WorksSection />
+      <StatsSection />
       <div className="h-[3000px] bg-slate-300"></div>
     </main>
   );
@@ -375,6 +376,36 @@ const WorksSection = () => {
             <button className="bg-accent-secondary hover:bg-accent/20 w-[70px] h-[70px] rounded-full">
               <i className="ri-arrow-right-s-line text-3xl text-primary pl-1"></i>
             </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const StatsSection = () => {
+  return (
+    <section
+      id="brands"
+      className="stats mt-[80px] xl:mt-[200px] relative z-20 bg-accent-secondary py-[80px] xl:py-[150px]"
+    >
+      <div className="px-12">
+        <div className="grid grid-cols-1 xl:grid-cols-4 gap-12">
+          <div className="stats_item text-center xl:border-r xl:border-accent">
+            <h3 className="h1 font-primary text-accent">12</h3>
+            <p>Years Of Experience</p>
+          </div>
+          <div className="stats_item text-center xl:border-r xl:border-accent">
+            <h3 className="h1 font-primary text-accent">85</h3>
+            <p>Projects Completed</p>
+          </div>
+          <div className="stats_item text-center xl:border-r xl:border-accent">
+            <h3 className="h1 font-primary text-accent">15</h3>
+            <p>Active Projects</p>
+          </div>
+          <div className="stats_item text-center">
+            <h3 className="h1 font-primary text-accent">95</h3>
+            <p>Happy Customers</p>
           </div>
         </div>
       </div>
