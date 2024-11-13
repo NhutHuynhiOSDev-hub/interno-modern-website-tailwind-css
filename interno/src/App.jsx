@@ -18,6 +18,10 @@ import work02 from "./assets/work/02.png";
 import work03 from "./assets/work/03.png";
 import work04 from "./assets/work/04.png";
 
+import news01 from "./assets/news/01.png";
+import news02 from "./assets/news/02.png";
+import news03 from "./assets/news/03.png";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -81,6 +85,7 @@ const Main = () => {
       <BrandsSection />
       <WorksSection />
       <StatsSection />
+      <NewsSection />
       <div className="h-[3000px] bg-slate-300"></div>
     </main>
   );
@@ -340,7 +345,7 @@ const WorksSection = () => {
           </div>
         </div>
         {/* Work 2 */}
-        <div className="w-full  h-full">
+        <div className="w-full h-full">
           <img className="mb-6 w-full" src={work01} alt="work-image" />
           <div className="flex justify-between items-center w-full">
             <div>
@@ -386,11 +391,11 @@ const WorksSection = () => {
 const StatsSection = () => {
   return (
     <section
-      id="brands"
+      id="stats"
       className="stats mt-[80px] xl:mt-[200px] relative z-20 bg-accent-secondary py-[80px] xl:py-[150px]"
     >
       <div className="px-12">
-        <div className="grid grid-cols-1 xl:grid-cols-4 gap-12">
+        <div className="stats__grid grid grid-cols-1 xl:grid-cols-4 gap-12">
           <div className="stats_item text-center xl:border-r xl:border-accent">
             <h3 className="h1 font-primary text-accent">12</h3>
             <p>Years Of Experience</p>
@@ -406,6 +411,66 @@ const StatsSection = () => {
           <div className="stats_item text-center">
             <h3 className="h1 font-primary text-accent">95</h3>
             <p>Happy Customers</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const NewsSection = () => {
+  return (
+    <section
+      id="news"
+      className="news px-12 mt-[50px] xl:mt-[100px] relative z-20"
+    >
+      <div className="w-full text-center mb-[52px] flex flex-col justify-center items-center space-y-12">
+        <h2 className="news_title h2 mb-3">Articles & News</h2>
+        <p className="news_subtitle max-w-3xl">
+          It is a long established fact that a reader will be distracted by the
+          of readable content of a page when lookings at its layouts the points
+          of using.
+        </p>
+      </div>
+      <div className="news_grid grid grid-cols-1 xl:grid-cols-3 gap-[30px]">
+        <div className="news_item w-full max-w-[400px] h-[520px] border border-primary/20 rounded-[62px] p-[20px] hover:bg-accent-secondary transition-all group cursor-pointer mx-auto">
+          <img className="mb-5 w-full bg-center" src={news01} />
+          <div className="flex flex-col gap-[30px]">
+            <h3 className="h3">
+              Let’s Get Solution For Building Construction Work
+            </h3>
+            <div className="flex justify-between items-center">
+              <p className="text-base">22 June, 2024</p>
+              <button className="bg-accent-secondary w-[52px] h-[52px] rounded-full">
+                <i className="ri-arrow-right-s-line text-3xl text-primary pl-1"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="news_item w-full max-w-[400px] h-[520px] border border-primary/20 rounded-[62px] p-[20px] hover:bg-accent-secondary transition-all group cursor-pointer mx-auto">
+          <img className="mb-5 w-full bg-center" src={news02} />
+          <div className="flex flex-col gap-[30px]">
+            <h3 className="h3">Low Cost Latest Invented Interior Designing</h3>
+            <div className="flex justify-between items-center">
+              <p className="text-base">24 June,2024</p>
+              <button className="bg-accent-secondary w-[52px] h-[52px] rounded-full">
+                <i className="ri-arrow-right-s-line text-3xl text-primary pl-1"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="news_item w-full max-w-[400px] h-[520px] border border-primary/20 rounded-[62px] p-[20px] hover:bg-accent-secondary transition-all group cursor-pointer mx-auto">
+          <img className="mb-5 w-full bg-cover" src={news03} />
+          <div className="flex flex-col gap-[30px]">
+            <h3 className="h3">
+              Best For Any Office & Business Interior Solution
+            </h3>
+            <div className="flex justify-between items-center">
+              <p className="text-base">28 June, 2024</p>
+              <button className="bg-accent-secondary w-[52px] h-[52px] rounded-full">
+                <i className="ri-arrow-right-s-line text-3xl text-primary pl-1"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
