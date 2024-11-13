@@ -86,6 +86,7 @@ const Main = () => {
       <WorksSection />
       <StatsSection />
       <NewsSection />
+      <ContactSection />
       <div className="h-[3000px] bg-slate-300"></div>
     </main>
   );
@@ -472,6 +473,28 @@ const NewsSection = () => {
               </button>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const ContactSection = () => {
+  return (
+    <section
+      id="contact"
+      className="contact relative mt-[50px] xl:mt-[100px] mx-12 z-20"
+    >
+      <div className="contact__container mx-auto bg-primary rounded-[70px] p-20 ">
+        <div className="contact_text text-center max-w-[640px] mx-auto">
+          <h3 className="h2 text-white mb-4">Do you want to join Interno?</h3>
+          <p className="text-white mb-12">
+            It is a long established fact will be distracted.
+          </p>
+          <button className="btn bg-accent mx-auto">
+            Connect with us
+            <i className="ri-arrow-right-line text-primary"></i>
+          </button>
         </div>
       </div>
     </section>
