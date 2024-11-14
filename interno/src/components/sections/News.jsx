@@ -24,7 +24,7 @@ const News = () => {
   return (
     <section
       id="news"
-      className="news px-12 lg:px-48 mt-[100px] xl:mt-[200px] relative z-20"
+      className="news px-12 lg:px-24 mt-[100px] xl:mt-[200px] relative z-20"
     >
       <div className="w-full text-center mb-[52px] flex flex-col justify-center items-center space-y-12">
         <h2 className="news__title h2 mb-3">Articles & News</h2>

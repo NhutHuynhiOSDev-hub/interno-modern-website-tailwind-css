@@ -15,7 +15,7 @@ sr.reveal(".steps__text", {
 const Steps = () => {
   return (
     <section id="steps" className="mt-[100px] xl:mt-[200px] relative z-20">
-      <div className="px-12 lg:px-48">
+      <div className="px-12 lg:px-24">
         <div className="grid grid-cols-1 gap-12 xl:grid-cols-3">
           {/* Step 1 */}
           <div className="steps__text flex flex-col justify-center items-center space-y-6 p-5 text-center ">

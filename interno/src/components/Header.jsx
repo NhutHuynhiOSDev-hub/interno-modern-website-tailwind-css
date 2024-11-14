@@ -17,15 +17,27 @@ const Header = () => {
             <i className="ri-menu-4-line text-4xl text-primary"></i>
           </button>
           <ul
-            className="bg-white fixed lg:relative flex flex-col lg:flex-row gap-4 lg:gap-8 h-0 lg:h-auto w-full left-0 right-0 mt-6 lg:mt-0 lg:p-0 px-12 lg:px-24 overflow-hidden transition-all duration-300"
+            className="fixed lg:relative flex flex-col items-end lg:flex-row lg:justify-end gap-4 lg:gap-8 h-0 lg:h-auto w-full left-0 right-0 mt-6 lg:mt-0 lg:p-0 px-12 overflow-hidden transition-all duration-300"
             id="nav_menu"
           >
-            <li>Home</li>
-            <li>About</li>
-            <li>Testimonials</li>
-            <li>Our Work</li>
-            <li>News</li>
-            <li>Contact</li>
+            <li>
+              <a href="#hero">Home</a>
+            </li>
+            <li>
+              <a href="#about">About Us</a>
+            </li>
+            <li>
+              <a href="#testimonials">Testimonials</a>
+            </li>
+            <li>
+              <a href="#works">Our Works</a>
+            </li>
+            <li>
+              <a href="#news">News</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
           </ul>
         </nav>
       </div>

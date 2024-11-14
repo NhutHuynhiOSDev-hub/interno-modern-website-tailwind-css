@@ -14,7 +14,7 @@ function AboutUs() {
   return (
     <section
       id="about"
-      className="px-12 lg:px-48 mt-[100px] xl:mt-[200px] relative z-20"
+      className="px-12 lg:px-24 mt-[100px] xl:mt-[200px] relative z-20"
     >
       <div className="flex space-y-12 flex-col xl:flex-row-reverse text-center xl:text-left justify-between items-center gap-8 xl:gap-[74px]">
         {/* Image */}
@@ -34,7 +34,7 @@ function AboutUs() {
           </div>
           {/* Phone */}
           <div className="flex flex-row justify-center lg:justify-start items-center space-x-8">
-            <div className="bg-accent/15 rounded-full w-[93px] h-[93px] flex justify-center items-center">
+            <div className="bg-primary hover:bg-primary/20 rounded-full w-20 h-20 flex justify-center items-center">
               <i className="ri-phone-fill text-accent text-4xl"></i>
             </div>
             <div className="flext justify-center items-center text-left space-y-4 ">

@@ -20,7 +20,7 @@ const Works = () => {
   return (
     <section
       id="works"
-      className="px-12 lg:px-48 works mt-[100px] xl:mt-[200px] relative z-20"
+      className="px-12 lg:px-24 works mt-[100px] xl:mt-[200px] relative z-20"
     >
       <div className="flex flex-col space-y-12 justify-center items-center text-center mb-24">
         <h2 className="works__title h2 mb-4 ">Follow Our Projects</h2>

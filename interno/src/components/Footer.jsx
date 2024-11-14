@@ -18,7 +18,7 @@ const Footer = () => {
   return (
     <footer
       id="footer"
-      className="footer relative mt-[100px] xl:mt-[200px] mx-12 z-20"
+      className="footer relative mt-[100px] xl:mt-[200px] px-12 lg:px-24 z-20"
     >
       <div className="flex flex-col xl:flex-row gap-26 xl:gap-36 mx-auto ">
         <div className="w-full w-max-[400px] flex flex-col items-center xl:items-start space-y-8 text-center xl:text-start mb-8">
@@ -58,11 +58,21 @@ const Footer = () => {
           <div className="footer__item">
             <h3 className="h3 mb-3 ">Pages</h3>
             <ul className="flex flex-col gap-4">
-              <li>About Us</li>
-              <li>Testimonials</li>
-              <li>Our Works</li>
-              <li>News</li>
-              <li>Contact</li>
+              <li>
+                <a href="#about">About Us</a>
+              </li>
+              <li>
+                <a href="#testimonials">Testimonials</a>
+              </li>
+              <li>
+                <a href="#works">Our Works</a>
+              </li>
+              <li>
+                <a href="#news">News</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
             </ul>
           </div>
 

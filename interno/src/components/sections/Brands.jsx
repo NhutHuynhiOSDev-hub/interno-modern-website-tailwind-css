@@ -22,7 +22,7 @@ sr.reveal(".brands__img", {
 const Brands = () => {
   return (
     <section id="brands" className=" mt-[100px] xl:mt-[200px] relative z-20">
-      <div className="px-12 lg:px-48 mx-auto flex flex-col xl:flex-row justify-center items-center gap-12">
+      <div className="px-12 lg:px-24 mx-auto flex flex-col xl:flex-row justify-center items-center gap-12">
         <img className="brands__img" src={brand01} alt="brand-logo" />
         <img className="brands__img" src={brand02} alt="brand-logo" />
         <img className="brands__img" src={brand03} alt="brand-logo" />
