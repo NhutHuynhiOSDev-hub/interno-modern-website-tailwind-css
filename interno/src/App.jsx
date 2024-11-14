@@ -22,6 +22,7 @@ import news01 from "./assets/news/01.png";
 import news02 from "./assets/news/02.png";
 import news03 from "./assets/news/03.png";
 
+import ScrollReveal from "scrollreveal";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -36,6 +37,64 @@ const toggleButton = () => {
   const navMenu = document.querySelector("#nav_menu");
   navMenu.classList.toggle("nav-is-open");
 };
+
+const sr = ScrollReveal({
+  distance: "60px",
+  duration: 1500,
+  delay: 600,
+});
+
+sr.reveal(".hero__text", { origin: "top" });
+sr.reveal(".steps__text", {
+  origin: "bottom",
+  distance: "100px",
+  interval: 100,
+});
+sr.reveal(".about__text", { origin: "left" });
+sr.reveal(".about__img", { origin: "right", delay: 800 });
+
+sr.reveal(".testimonials__bg", { origin: "bottom", delay: 800 });
+sr.reveal(".testimonials__title", { origin: "bottom" });
+sr.reveal(".testimonials__slider", { origin: "bottom", delay: 1000 });
+
+sr.reveal(".brands__img", {
+  origin: "bottom",
+  distance: "100px",
+  interval: 100,
+  delay: 600,
+});
+
+sr.reveal(".works__title", { origin: "bottom" });
+sr.reveal(".works__subtitle", { origin: "bottom", delay: 800 });
+sr.reveal(".works__grid", { origin: "bottom" });
+sr.reveal(".works__item", { origin: "bottom", delay: 600 });
+
+sr.reveal(".stats", { origin: "bottom" });
+sr.reveal(".stats__item", {
+  origin: "bottom",
+  distance: "100px",
+  interval: 100,
+});
+
+sr.reveal(".news__title", { origin: "bottom", delay: 800 });
+sr.reveal(".news__subtitle", { origin: "bottom", delay: 800 });
+sr.reveal(".news__grid", { origin: "bottom", delay: 800 });
+sr.reveal(".news__item", {
+  origin: "bottom",
+  distance: "100px",
+  delay: 1000,
+  interval: 100,
+});
+
+sr.reveal(".contact__container", { origin: "bottom" });
+sr.reveal(".contact_text", { origin: "bottom", delay: 800 });
+
+sr.reveal(".footer__item", {
+  origin: "bottom",
+  distance: "100px",
+  interval: 100,
+});
+sr.reveal(".footer__copyright", { origin: "bottom", delay: 800 });
 
 const App = () => {
   return (
@@ -115,10 +174,10 @@ const HeroSection = () => {
 const StepsSection = () => {
   return (
     <section id="steps" className="mt-[80px] xl:mt-[200px] relative z-20">
-      <div className=" px-12">
+      <div className="px-12">
         <div className="grid grid-cols-1 gap-12 xl:grid-cols-3">
           {/* Step 1 */}
-          <div className="flex flex-col justify-center items-center space-y-5 p-5 text-center ">
+          <div className="steps__text flex flex-col justify-center items-center space-y-5 p-5 text-center ">
             <i className="ri-compasses-2-line text-5xl text-accent"></i>
             <h3 className="h3">Project Planning</h3>
             <p className="max-w-md text-center">
@@ -131,7 +190,7 @@ const StepsSection = () => {
             </a>
           </div>
           {/* Step 2 */}
-          <div className="flex flex-col justify-center items-center space-y-5 p-5 text-center ">
+          <div className="steps__text flex flex-col justify-center items-center space-y-5 p-5 text-center ">
             <i className="ri-magic-line text-5xl text-accent"></i>
             <h3 className="h3">Gaining Materials</h3>
             <p className="max-w-md text-center">
@@ -144,7 +203,7 @@ const StepsSection = () => {
             </a>
           </div>
           {/* Step 3 */}
-          <div className="flex flex-col justify-center items-center space-y-5 p-5 text-center ">
+          <div className="steps__text flex flex-col justify-center items-center space-y-5 p-5 text-center ">
             <i className="ri-tools-line text-5xl text-accent"></i>
             <h3 className="h3">Project Execution</h3>
             <p className="max-w-md text-center">
@@ -170,10 +229,10 @@ const AboutUsSection = () => {
     >
       <div className="flex space-y-12 flex-col xl:flex-row-reverse text-center xl:text-left justify-between items-center gap-8 xl:gap-[74px]">
         {/* Image */}
-        <div className=" max-w-[553px]">
+        <div className="about__img about max-w-[553px]">
           <img src={about} />
         </div>
-        <div className="flex flex-col flex-1 space-y-12 justify-center items-center xl:items-start">
+        <div className="about__text flex flex-col flex-1 space-y-12 justify-center items-center xl:items-start">
           <h2 className="h2">We Create The Art Of Stylish Living Stylishly</h2>
           <p>
             It is a long established fact that a reader will be distracted by
@@ -205,13 +264,15 @@ const TestimonialsSection = () => {
   return (
     <section
       id="testimonials"
-      className="mt-[80px] xl:mt-[200px] relative z-20"
+      className="testimonials mt-[80px] xl:mt-[200px] relative z-20"
     >
-      <div className="p-12 bg-accent-secondary rounded-[70px] ">
+      <div className="testimonials__bg p-12 bg-accent-secondary rounded-[70px] ">
         <div className="w-full">
-          <h2 className="h2 text-center mb-9">What clients say</h2>
+          <h2 className="testimonials__title h2 text-center mb-9">
+            What clients say
+          </h2>
           <Swiper
-            className=" h-[400px] w-full"
+            className="testimonials__slider h-[400px] w-full"
             loop={true}
             pagination={{
               clickable: true,
@@ -238,7 +299,7 @@ const TestimonialsSection = () => {
             onSwiper={(swiper) => console.log(swiper)}
           >
             <SwiperSlide>
-              <div className="flex flex-col space-y-2 w-full max-w-[370px] max-h-[450px] bg-white justify-center items-center p-9 rounded-[30px]">
+              <div className="flex flex-col space-y-2 w-full max-w-[370px] max-h-[450px] bg-white justify-center items-center p-9 rounded-[30px] mx-auto">
                 <div className="flex flex-row justify-center items-center space-x-4">
                   <img src={test01} />
                   <div className="flex flex-col items-center space-y-2">
@@ -253,7 +314,7 @@ const TestimonialsSection = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="flex flex-col space-y-2 w-full max-w-[370px] max-h-[450px] bg-white justify-center items-center p-9 rounded-[30px]">
+              <div className="flex flex-col space-y-2 w-full max-w-[370px] max-h-[450px] bg-white justify-center items-center p-9 rounded-[30px] mx-auto">
                 <div className="flex flex-row justify-center items-center space-x-4">
                   <img src={test02} />
                   <div className="flex flex-col items-center space-y-2">
@@ -268,7 +329,7 @@ const TestimonialsSection = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="flex flex-col space-y-2 w-full max-w-[370px] max-h-[450px] bg-white justify-center items-center p-9 rounded-[30px]">
+              <div className="flex flex-col space-y-2 w-full max-w-[370px] max-h-[450px] bg-white justify-center items-center p-9 rounded-[30px] mx-auto">
                 <div className="flex flex-row justify-center items-center space-x-4">
                   <img src={test03} />
                   <div className="flex flex-col items-center space-y-2">
@@ -283,7 +344,7 @@ const TestimonialsSection = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="flex flex-col space-y-2 w-full max-w-[370px] max-h-[450px] bg-white justify-center items-center p-9 rounded-[30px]">
+              <div className="testimonials_slider flex flex-col space-y-2 w-full max-w-[370px] max-h-[450px] bg-white justify-center items-center p-9 rounded-[30px] mx-auto">
                 <div className="flex flex-row justify-center items-center space-x-4">
                   <img src={test04} />
                   <div className="flex flex-col items-center space-y-2">
@@ -308,11 +369,11 @@ const BrandsSection = () => {
   return (
     <section id="brands" className=" mt-[80px] xl:mt-[200px] relative z-20">
       <div className="px-12  mx-auto flex flex-col xl:flex-row justify-center items-center gap-12">
-        <img src={brand01} alt="brand-logo" />
-        <img src={brand02} alt="brand-logo" />
-        <img src={brand03} alt="brand-logo" />
-        <img src={brand04} alt="brand-logo" />
-        <img src={brand05} alt="brand-logo" />
+        <img className="brands__img" src={brand01} alt="brand-logo" />
+        <img className="brands__img" src={brand02} alt="brand-logo" />
+        <img className="brands__img" src={brand03} alt="brand-logo" />
+        <img className="brands__img" src={brand04} alt="brand-logo" />
+        <img className="brands__img" src={brand05} alt="brand-logo" />
       </div>
     </section>
   );
@@ -326,14 +387,14 @@ const WorksSection = () => {
     >
       <div className="flex flex-col space-y-12 justify-center items-center text-center mb-24">
         <h2 className="works__title h2 mb-4 ">Follow Our Projects</h2>
-        <p className="works__subTitle max-w-3xl">
+        <p className="works__subtitle max-w-3xl">
           It is a long established fact that a reader will be distracted by the
           of readable content of page lookings at its layouts points.p
         </p>
       </div>
-      <div className=" works__grid grid grid-cols-1 xl:grid-cols-2 gap-[50px]">
+      <div className="works__grid grid grid-cols-1 xl:grid-cols-2 gap-[50px]">
         {/* Work 1 */}
-        <div className="w-full h-full">
+        <div className="works__item w-full h-full">
           <img className="mb-6 w-full" src={work02} alt="work-image" />
           <div className="flex justify-between items-center w-full">
             <div>
@@ -346,7 +407,7 @@ const WorksSection = () => {
           </div>
         </div>
         {/* Work 2 */}
-        <div className="w-full h-full">
+        <div className="works__item w-full h-full">
           <img className="mb-6 w-full" src={work01} alt="work-image" />
           <div className="flex justify-between items-center w-full">
             <div>
@@ -359,7 +420,7 @@ const WorksSection = () => {
           </div>
         </div>
         {/* Work 3 */}
-        <div className="w-full  h-full">
+        <div className="works__item w-full h-full">
           <img className="mb-6 w-full" src={work04} alt="work-image" />
           <div className="flex justify-between items-center w-full">
             <div>
@@ -372,7 +433,7 @@ const WorksSection = () => {
           </div>
         </div>
         {/* Work 4 */}
-        <div className="w-full  h-full">
+        <div className="works__item w-full h-full">
           <img className="mb-6 w-full" src={work03} alt="work-image" />
           <div className="flex justify-between items-center w-full">
             <div>
@@ -396,20 +457,20 @@ const StatsSection = () => {
       className="stats mt-[80px] xl:mt-[200px] relative z-20 bg-accent-secondary py-[80px] xl:py-[150px]"
     >
       <div className="px-12">
-        <div className="stats__grid grid grid-cols-1 xl:grid-cols-4 gap-12">
-          <div className="stats_item text-center xl:border-r xl:border-accent">
+        <div className=" grid grid-cols-1 xl:grid-cols-4 gap-12">
+          <div className="stats__item text-center xl:border-r xl:border-accent">
             <h3 className="h1 font-primary text-accent">12</h3>
             <p>Years Of Experience</p>
           </div>
-          <div className="stats_item text-center xl:border-r xl:border-accent">
+          <div className="stats__item text-center xl:border-r xl:border-accent">
             <h3 className="h1 font-primary text-accent">85</h3>
             <p>Projects Completed</p>
           </div>
-          <div className="stats_item text-center xl:border-r xl:border-accent">
+          <div className="stats__item text-center xl:border-r xl:border-accent">
             <h3 className="h1 font-primary text-accent">15</h3>
             <p>Active Projects</p>
           </div>
-          <div className="stats_item text-center">
+          <div className="stats__item text-center">
             <h3 className="h1 font-primary text-accent">95</h3>
             <p>Happy Customers</p>
           </div>
@@ -426,15 +487,15 @@ const NewsSection = () => {
       className="news px-12 mt-[50px] xl:mt-[100px] relative z-20"
     >
       <div className="w-full text-center mb-[52px] flex flex-col justify-center items-center space-y-12">
-        <h2 className="news_title h2 mb-3">Articles & News</h2>
-        <p className="news_subtitle max-w-3xl">
+        <h2 className="news__title h2 mb-3">Articles & News</h2>
+        <p className="news__subtitle max-w-3xl">
           It is a long established fact that a reader will be distracted by the
           of readable content of a page when lookings at its layouts the points
           of using.
         </p>
       </div>
-      <div className="news_grid grid grid-cols-1 xl:grid-cols-3 gap-[30px]">
-        <div className="news_item w-full max-w-[400px] h-[520px] border border-primary/20 rounded-[62px] p-[20px] hover:bg-accent-secondary transition-all group cursor-pointer mx-auto">
+      <div className="news__grid grid grid-cols-1 xl:grid-cols-3 gap-[30px]">
+        <div className="news__item w-full max-w-[400px] h-[520px] border border-primary/20 rounded-[62px] p-[20px] hover:bg-accent-secondary transition-all group cursor-pointer mx-auto">
           <img className="mb-5 w-full bg-center" src={news01} />
           <div className="flex flex-col gap-[30px]">
             <h3 className="h3">
@@ -448,7 +509,7 @@ const NewsSection = () => {
             </div>
           </div>
         </div>
-        <div className="news_item w-full max-w-[400px] h-[520px] border border-primary/20 rounded-[62px] p-[20px] hover:bg-accent-secondary transition-all group cursor-pointer mx-auto">
+        <div className="news__item w-full max-w-[400px] h-[520px] border border-primary/20 rounded-[62px] p-[20px] hover:bg-accent-secondary transition-all group cursor-pointer mx-auto">
           <img className="mb-5 w-full bg-center" src={news02} />
           <div className="flex flex-col gap-[30px]">
             <h3 className="h3">Low Cost Latest Invented Interior Designing</h3>
@@ -460,7 +521,7 @@ const NewsSection = () => {
             </div>
           </div>
         </div>
-        <div className="news_item w-full max-w-[400px] h-[520px] border border-primary/20 rounded-[62px] p-[20px] hover:bg-accent-secondary transition-all group cursor-pointer mx-auto">
+        <div className="news__item w-full max-w-[400px] h-[520px] border border-primary/20 rounded-[62px] p-[20px] hover:bg-accent-secondary transition-all group cursor-pointer mx-auto">
           <img className="mb-5 w-full bg-cover" src={news03} />
           <div className="flex flex-col gap-[30px]">
             <h3 className="h3">
@@ -486,7 +547,7 @@ const ContactSection = () => {
       className="contact relative mt-[50px] xl:mt-[100px] mx-12 z-20"
     >
       <div className="contact__container mx-auto bg-primary rounded-[70px] p-20 ">
-        <div className="contact_text text-center max-w-[640px] mx-auto">
+        <div className="contact__text text-center max-w-[640px] mx-auto">
           <h3 className="h2 text-white mb-4">Do you want to join Interno?</h3>
           <p className="text-white mb-12">
             It is a long established fact will be distracted.
@@ -542,7 +603,7 @@ const Footer = () => {
 
         <div className="w-full flex flex-col xl:flex-row text-center xl:text-start gap-12 xl:gap-28 justify-center xl:justify-end">
           {/* Pages */}
-          <div className="foooter__item">
+          <div className="footer__item">
             <h3 className="h3 mb-3 ">Pages</h3>
             <ul className="flex flex-col gap-4">
               <li>About Us</li>
@@ -554,7 +615,7 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div className="foooter__item">
+          <div className="footer__item">
             <h3 className="h3 mb-3 ">Services</h3>
             <ul className="flex flex-col gap-4">
               <li>Kitchen</li>
@@ -565,7 +626,7 @@ const Footer = () => {
           </div>
 
           {/* Contact */}
-          <div className="foooter__item max-w-[260px] mx-auto xl:mx-0">
+          <div className="footer__item max-w-[260px] mx-auto xl:mx-0">
             <h3 className="h3 mb-3 ">Contact</h3>
             <ul className="flex flex-col gap-6 text-xl">
               <p>55 East Birchwood Ave. Brooklyn, New York 11201</p>
@@ -575,7 +636,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p className="footer_copyright mt-12 p-12 text-xl text-center xl:border-t bg-white">
+      <p className="footer__copyright mt-12 p-12 text-xl text-center xl:border-t bg-white">
         Copyright © Interno 2024. All rights reserved.
       </p>
     </footer>
